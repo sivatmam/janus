@@ -9,11 +9,14 @@ public class RangeTest {
       try{
         
         Range r2 = new Range(5, 1);
+        System.out.println(r2);
 
       }catch(Exception e){
           System.err.println("Caught a buggy bug.");
           System.err.println(e);
       }
+
+      
     }
     
 }
