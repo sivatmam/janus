@@ -4,9 +4,17 @@ public class Bicycle {
 
    // the Bicycle class has
    // three fields
+   
    private int cadence;
+
+   
    private int gear;
    private int speed;
+   {speed=100;}
+   private final int id;
+
+   private static int numberOfBicycles;
+   static {numberOfBicycles=0;}
    
    // the Bicycle class has
    // one constructor
@@ -14,10 +22,17 @@ public class Bicycle {
       gear = startGear;
       cadence = startCadence;
       speed = startSpeed; 
+
+      Bicycle.numberOfBicycles++;
+      
+      id = Bicycle.numberOfBicycles;
    }
 
    // the Bicycle class has
    // four methods
+
+   public int getId(){return this.id;}
+
    public int getCadence(){ return this.cadence; }
    public void setCadence(int newValue){
       cadence = newValue;
